@@ -1,11 +1,11 @@
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect } from "react";
 import Question from "./components/Question";
 import axios from "axios";
-import { Button } from "react-bootstrap";
+
 
 import PageNavBar from "./components/PageNavBar";
 // ! react BootStrap 
-import About from './components/Home/About'
+
 
 
 import logo from './Img/attachment_95890421-removebg-preview.png'
@@ -69,7 +69,7 @@ function App() {
     
       <footer className="footer-wrapper">
       <div className="text-center text-white p-3 " variant='dark' bg="dark" >
-           <h4>Made By <a className="gitLink" href='https://github.com/hal-alex' target='_blank'>Alex</a> & <a className="gitLink" href='https://github.com/SyztemError' target='_blank'>Serhan</a>
+           <h4>Made By <a className="gitLink" href='https://github.com/hal-alex' >Alex</a> & <a className="gitLink" href='https://github.com/SyztemError' >Serhan</a>
            
            </h4> 
             {/* variant="dark" */}
