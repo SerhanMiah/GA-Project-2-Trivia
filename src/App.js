@@ -69,7 +69,7 @@ function App() {
     
       <footer className="footer-wrapper">
       <div className="text-center text-white p-3 " variant='dark' bg="dark" >
-           <h4>Made By <a className="gitLink" href='https://github.com/hal-alex' target='_blank'>Alex</a> & <a className="gitLink" href='https://github.com/SyztemError/GA-Project-2-Trivia' target='_blank'>Serhan</a>
+           <h4>Made By <a className="gitLink" href='https://github.com/hal-alex' target='_blank'>Alex</a> & <a className="gitLink" href='https://github.com/SyztemError' target='_blank'>Serhan</a>
            
            </h4> 
             {/* variant="dark" */}
