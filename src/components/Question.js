@@ -44,7 +44,7 @@ const Question = ({ testData, setStartVisibility, setVisible }) => {
           
           if (index === questionIndex) {
          
-            { arrayMagic(correctAnswer, incorrectAnswers) }
+            arrayMagic(correctAnswer, incorrectAnswers) 
             return (
               <div className='question-section'>
                 <div className='text'>
