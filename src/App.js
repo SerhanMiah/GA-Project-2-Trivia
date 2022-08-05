@@ -69,7 +69,9 @@ function App() {
     
       <footer className="footer-wrapper">
       <div className="text-center text-white p-3 " variant='dark' bg="dark" >
-            Made By Alex & Serhan
+           <h4>Made By <a href='https://github.com/hal-alex/ga-project-2-trivia' target='_blank'>Alex</a> & <a href='https://github.com/SyztemError/GA-Project-2-Trivia' target='_blank'>Serhan</a>
+           
+           </h4> 
             {/* variant="dark" */}
     
       </div>
