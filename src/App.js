@@ -13,7 +13,7 @@ import logo from './Img/attachment_95890421-removebg-preview.png'
 function App() {
 
   const [testData, setTestData] = useState([])
-
+  const [visibleQuestion, setVisible] = useState(false)
 
   useEffect(() => {
 
@@ -28,10 +28,10 @@ function App() {
         }
       }
       getData()
-    }, [])
+    }, [visibleQuestion])
   
 
-  const [visibleQuestion, setVisible] = useState(false)
+
 
   const [startVisibility, setStartVisibility] = useState(true)
 

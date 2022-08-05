@@ -43,7 +43,7 @@ const Question = ({ testData, setStartVisibility, setVisible }) => {
           const { question, correctAnswer, incorrectAnswers, category, difficulty } = item
           
           if (index === questionIndex) {
-            {/* {createArray(correctAnswer, incorrectAnswers)} */ }
+         
             { arrayMagic(correctAnswer, incorrectAnswers) }
             return (
               <div className='question-section'>
