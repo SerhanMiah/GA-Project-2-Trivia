@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.site-wrapper main {
+  flex-grow: 1;
+  padding-top: 20px;
+}
+
+.btn.dark {
+  background-color: blue;
+  border: none;
+  color: #fff;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.hero .hero-container {
+  background-color: lightblue;
+  padding: 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
