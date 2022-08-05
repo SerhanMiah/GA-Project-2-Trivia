@@ -60,7 +60,7 @@ function App() {
         {startVisibility ? <>
           <h6 className="font-weight-bold text-center display-6">Click on the Start button to begin the questions!</h6>
           <div className="d-grid gap-2">
-          <button className="btn btn-success btn-lg"  onClick={questionVisibility}><h4>Start Quiz</h4></button>
+          <button className="btn btn-success btn-sm"  onClick={questionVisibility}><h4>Start Quiz</h4></button>
         </div>
         </> : ""
         } 

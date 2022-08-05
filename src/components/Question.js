@@ -69,10 +69,13 @@ const Question = ({ testData, setStartVisibility, setVisible }) => {
           }
         })}
 
-        {questionIndex >= testData.length ? [<h1 className='display-3'>Quiz complete! Your final score is: {score}</h1>, <Button className='newQuiz' variant="primary" size="lg" onClick={showStart}>
+
+
+        {questionIndex >= testData.length ? [<h1 className='display-3'>Quiz complete! Your final score is: {score}</h1>, 
+        <div className='startQuiz '><button className='newQuiz btn btn-success btn-sm' onClick={showStart}>
           <h2 className='start-newQuiz'>Start new quiz</h2>
         
-          </Button>, testData.map((item, index) => {
+          </button></div>, testData.map((item, index) => {
           const { question, correctAnswer, incorrectAnswers } = item
           return(
   

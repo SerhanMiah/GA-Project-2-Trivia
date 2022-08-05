@@ -15,7 +15,7 @@ function PageNavBar() {
             
           <NavLink to="/" href="." >Home</NavLink>
 
-          <NavLink to="/About" element={About}>About</NavLink>
+          {/* <NavLink to="/About" element={About}>About</NavLink> */}
 
 
           {/* <Nav.Link to='/About'>About Us</Nav.Link> */}
