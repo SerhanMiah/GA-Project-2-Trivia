@@ -9,8 +9,11 @@ const Question = ({ testData, setStartVisibility, setVisible }) => {
     setVisible(false)
   }
   const [questionIndex, setQuestionIndex] = useState(0)
+
   const [score, setScore] = useState(0)
+
   function compareAnswers(event, correctAnswer) {
+
     setQuestionIndex(questionIndex + 1)
     if (event.target.value === correctAnswer) {
       setScore(score + 1)
@@ -19,8 +22,13 @@ const Question = ({ testData, setStartVisibility, setVisible }) => {
  
   let newArray
   function arrayMagic(correctAnswer, incorrectAnswers) {
+    
     newArray = [...incorrectAnswers, correctAnswer ].sort()
   }
+
+
+
+  
   return (
     <>
       <div className='hero-container'>
@@ -40,7 +48,7 @@ const Question = ({ testData, setStartVisibility, setVisible }) => {
                 {newArray.map(answer => {
                   return (
                   <div className='button-correct'>
-                  <Col  className='w-100 d-none d-md-block mb-3'>
+                  <Col  className='col-lg-12 col-md-4 mb-5' >
                   <Button  className='btn btn-lg btn-block' variant="outline-primary" size="lg" value={answer} onClick={(event) => { compareAnswers(event, correctAnswer); }}>{answer}</Button>
                   </Col>
                  </div>
