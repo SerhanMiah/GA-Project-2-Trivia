@@ -1,21 +1,10 @@
 # Project two - Trivia API
 
-My first dev project for the Software Engineering Immersive course and also my first ever project using JavaScript.
-
 ![game-screenshot](./src/Img/screenshots/image10.png)
 
 ## Deployment
 
-Play SpaceInvader here: https://sei-project2-quiz.netlify.app/
-
-## Getting started
-
-1. Access the source code via the 'Clone or download' button 
-2. Open the index.html file in your browser of choice to start the game.
-
-## Goal and timeframe:
-To build a functioning browser game with vanilla JavaScript in 8 days.
-
+Play Trivia here: https://sei-project2-quiz.netlify.app/
 
 ## Project Overview
 
