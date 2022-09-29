@@ -10,9 +10,6 @@ Play Trivia here: https://sei-project2-quiz.netlify.app/
 
 We had 36 hours to create a React Website using a public API. This was a pair project. We found a public trivia API. The key concept of this was to use a public API and make an interactive website using React. What I did was set up the API to run inside the front end using Axios, and useEffect and added filtered and map methods to view the data inside of the app in the JSX section. I also worked more on the Front-end and refactored some of the code to make it viewable on mobile devices.
 
-![game-screenshot](./src/Img/screenshots/image10.png)
-
-
 ## Technologies used:
 
 ### Front end:
@@ -40,7 +37,7 @@ We had 36 hours to create a React Website using a public API. This was a pair pr
 * Install Yarn in the terminal with command: yarn
 * Start server with the terminal command: yarn start
 
-# TThe Approach Taken: 
+# The Approach Taken: 
 
 Once the team has been decided, we came up with a plan on what was our MVP and aim for project 2. We started a blueprint using app.diagrams.net and made a small design of how the website will look like. The image below is our design for the trivia game. 
 
