@@ -8,7 +8,7 @@ Play Trivia here: https://sei-project2-quiz.netlify.app/
 
 ## Project Overview
 
-We had 36 hours to create a React Website using a public API. This was a pair project. We found a public trivia API. The key concept of this was to use a public API and make an interactive website using React. What I did was set up the API to run inside the front end using Axios, and useEffect and added filtered and map methods to view the data inside of the app in the JSX section. I also worked more on the Front-end and refactored some of the code to make it viewable on mobile devices.
+We had 36 hours to create a React Website using a public API. This was a pair project. We found a public trivia API. The key concept of this was to use a public API and make an interactive website using React. I set up the API to run inside the front end using Axios, and useEffect and added filters and map methods to view the data inside of the app in the JSX section. I also worked more on the Front-end and refactored some of the code to make it viewable on mobile devices.
 
 ## Technologies used:
 
@@ -39,7 +39,7 @@ We had 36 hours to create a React Website using a public API. This was a pair pr
 
 # The Approach Taken: 
 
-Once the team has been decided, we came up with a plan on what was our MVP and aim for project 2. We started a blueprint using app.diagrams.net and made a small design of how the website will look like. The image below is our design for the trivia game. 
+Once the team was decided, we planned our MVP and aim for project 2. We started a blueprint using app.diagrams.net and made a small design of how the website will look like. The image below is our design for the trivia game. 
 
 
 ![game-screenshot](./src/Img/screenshots/image15.png)
@@ -49,13 +49,12 @@ Once the team has been decided, we came up with a plan on what was our MVP and a
 ![game-screenshot](./src/Img/screenshots/image16.png)
 
 
-It gave us an ideal feel for what we wanted the trivia project to look like. The front-end plan was completed with the divs and overall HTML layout. The next part of the plan was on who would do what. We came up with a blueprint using Excalidraw which showed what tasks needed to be completed. Communication was a key part of what needed to be completed and by using google meetup and zoom we were able to communicate our ideas and fix issues throughout the project. Using Visual code live share was a great benefit but it was tricky to use as it was updating properly when using.
-
+It gave us a feel for what we wanted. The front-end plan was completed with the divs and overall HTML layout. The next part of the plan was on who would do what. We came up with a blueprint using Excalidraw which showed what tasks needed to be completed. Communication was a key part of the project. We met regularly using Google Meetup and Zoom throughout the project. Using Visual code live share was a great benefit but it was tricky to use as it was updating properly when using.
 
 
 ![game-screenshot](./src/Img/screenshots/image8.png)
 
-The first step was to choose the API. The first requirement for the project is that it has to be a public API. After searching the internet and using various websites like RapidAPI and mixed analytics. We found an API both myself and my teammate wanted to use. Checking if the API will work using the application insomnia with the result shown below. 
+The first requirement for the project was choosing the public API. After searching the internet and using various websites like RapidAPI and mixed analytic, we found an API both myself and my teammate wanted to use. We checked that the API would work by using Insomnia, with the result shown below. 
 
  Link - https://the-trivia-api.com/api/questions?categories=general_knowledge&limit=10&difficulty=ea
 
@@ -65,7 +64,7 @@ The first step was to choose the API. The first requirement for the project is t
 
 # The first 24 hours with code snippets: 
 
-With planning out of the way we can officially start the hackathon coding on creating a trivia based on a public API. Since this was my first pair project, I started using a git repository and began using Axios with useEffect to run the public API. 
+With planning out of the way we began the hackathon coding and created a trivia game based on a public API. Since this was my first pair project, I started using a git repository and began using Axios with useEffect to run the public API. 
 
 ```Javascript
     // AXIOS GET REQUEST
@@ -85,7 +84,11 @@ With planning out of the way we can officially start the hackathon coding on cre
     }, [visibleQuestion])
 ```
 
-Once the API was running, we started to install all relevant packages inside the program. We had some issues using VS Live share which wasn’t responding to my screen and it wasn’t updating the changes to my partner screen or vice-versa. I wasn’t always able to see my teammate's local changes. To resolve this issue we tried using git add and push and pulling the relevant data every few hours but ran into some issues as Alex was using a windows computer. So I decided we should zip the file and send it by google drive with every big change and communicate with Zoom and slack throughout the project. 
+Once the API was running, we started to install all relevant packages inside the program. We had some issues using VS Live share which wasn’t responding to my screen and it wasn’t updating the changes to my partner screen or vice-versa. I wasn’t always able to see my teammate's local changes. To resolve this issue we tried using git add and push and pulling the relevant data every few hours but ran into some issues as Alex was using a Windows computer. So I decided we should zip the file and send it by google drive with every big change and communicate with Zoom and slack throughout the project. 
+
+### Phase 1: Displaying each question one at a time with all four options. 
+
+The first challenge was to display each of the questions one at a time with all four options: correct answers and incorrect answers. I started by accessing the API. We used a useEffect and Axios to load the API data on page load and have it show each of the questions shown in the console log. At first, it displayed all the questions and answers. I started by using React Hooks to hide the visibility of the questions by using a conditional operator and then by using the JS map method to map through the data.  
 
 ```Javascript
     // QUESTION
@@ -129,12 +132,12 @@ Once the API was running, we started to install all relevant packages inside the
             )
           
 ```
-
-The next part is that we need to find a way to index the questions, this way we could find the start of each question based on the length of Trivia API. By doing this again using Hooks, increment the question Index by adding one. We could change the question based on the index.
+The next part was finding a way to index the questions, so we could find the start of each question based on the length of Trivia API. By doing this again using Hooks, increment the question Index by adding one. We could change the question based on the index.
 
 The next was to display the next question one at a time, after you have selected an answer for this we need to track the index of the Questions. As the array starts at 0, we needed to add one to the index. 
 
 We came up with the solution by creating a new function and using the useState - setQuestionIndex. We made an index in the map to be equal to the questionIndex and then we setQuestionIndex to add one to the questionIndex.
+
 
 ```Javascript
     // COMPARE ANSWERS
@@ -170,10 +173,10 @@ With all the questions displayed one at a time, our next focus was creating a sc
     }
   }
 ```
-
 Inside the function, if the event value is the correctAnswer the score will be added by one. By setting this function, we then call this function to look for the correct answer in the API and if it is selected the score will add one. 
 
 Then using an if statement gets the index to be equal to the questionIndex and returns the question by mapping through the data to access the incorrectAnswers and return these indexes as a button in an HTML format. 
+
 
 ```Javascript
     // ADDING CORRECT ANSWERS
@@ -308,15 +311,16 @@ I then used Square brackets, because it allows us to execute multiple things ins
 
 ### Challenges
 * Was randomizing the quiz for the game. Randomise the correct answers and incorrect answer in the Trivia position. 
-* Other issues were packages as I was unable to use some of the packages or install as I had some notifications on babel which wasn’t ideal on the Project 2 share file. I had to ask Alex to send me all the packages zipped to me after each commit as I was unable to get the current version of the Project.
+* As this was our first pair project we did have some issues with github with pushing and pulling data. As Alex was working on a window OS we did have some software and hardware issues but were available to resolve them by communicating with Zoom to discuss problems. 
  
-
+### Bugs
+* There are some obvious bugs I would like to address, and will be revisiting the react-API making it compatible with small devices like mobile and tablet devices. If you use the trivia on a mobile phone with less than 600px the buttons disappear, I hope that using react-bootstrap will be an easy fix as I know it is responsive to the size of the device. 
 
 ## Future improvements:
 
 * I would like to fix the button press as the colour remains when the next question gets loaded.
-* I would like to update some of the stylings and see if I could make the react button work or use CSS to hide the button but would need to look at it more
+* I would like to update some of the stylings and see if I could make the react button work or use CSS to hide the button but would need to look at it more. 
 
 
 ## Key learnings
-This was my first time working on a pair project and I have learned a lot working with Alex. It was a unique experience coming from our previous project and working together we were able to overcome our strengths and weakness in making a Trivia App using a public API. There were many issues and one of the key components coming from this project was the hardware compatibility issues both Alex had to solve. Using conditional JS to map through and using a variety of useState throughout this project.  
+This was my first time working on a pair project and I have learned a lot working with Alex. It was a unique experience coming from our previous project and working together we were able to overcome our strengths and weaknesses in making a Trivia App using a public API. There were many issues and one of the key components coming from this project was the hardware compatibility issues both Alex had to solve. Using conditional JS to map through and using a variety of useState throughout this project. 
