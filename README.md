@@ -304,7 +304,7 @@ I then used Square brackets, because it allows us to execute multiple things ins
 
 
 
-## Wins & Challenges
+## Wins & Challenges & Bugs
 
 ### Win
 * The biggest win was getting the scoreboard working and getting the result displayed on the last page after completing the Trivia page.
